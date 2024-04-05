@@ -1,11 +1,20 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
     "moduleResolution": "node",
-    "sourceMap": true
-  }
+    "outDir": "./dist/",
+    "paths": {
+      "components/*": ["components/*"],
+      "styles/*": ["styles/*"]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es6"
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
 }

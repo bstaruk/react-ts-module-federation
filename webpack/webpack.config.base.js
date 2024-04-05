@@ -1,27 +1,28 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
   context: path.resolve(process.cwd(), 'src'),
-  entry: {
-    app: [path.join(process.cwd(), 'src/app.ts')],
-  },
+  entry: path.join(process.cwd(), 'src/app.tsx'),
   output: {
     path: path.resolve(process.cwd(), 'dist'),
     // publicPath: '/',
   },
   resolve: {
     modules: ['node_modules', path.resolve(process.cwd(), 'src')],
-    extensions: ['.js', '.ts', '.css'],
+    extensions: ['.tsx', '.ts', '.css', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.ts?$/,
+        test: /\.(ts|tsx)?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.html$/,
@@ -52,13 +53,11 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({
-      extensions: ['.js', '.ts'],
+      extensions: ['.ts', '.tsx'],
     }),
-    new StylelintPlugin(),
     new HtmlPlugin({
-      template: 'index.html', // Input
-      filename: 'index.html', // Output
-      favicon: 'assets/favicon.png',
+      template: 'index.html',
+      filename: 'index.html',
     }),
   ],
 };
