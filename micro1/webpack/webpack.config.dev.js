@@ -9,7 +9,7 @@ module.exports = merge(webpackConfigBase, {
   devtool: 'source-map',
   devServer: {
     open: true,
-    port: 8080,
+    port: 3030,
     watchFiles: ['src/**/*'],
   },
 });
