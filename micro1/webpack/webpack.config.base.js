@@ -1,10 +1,12 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 const HtmlPlugin = require('html-webpack-plugin');
 const path = require('path');
+const deps = require('../package.json').dependencies;
 
 module.exports = {
   context: path.resolve(process.cwd(), 'src'),
-  entry: path.join(process.cwd(), 'src/app.tsx'),
+  entry: path.join(process.cwd(), 'src/index.ts'),
   output: {
     path: path.resolve(process.cwd(), 'dist'),
     // publicPath: '/',
@@ -54,6 +56,24 @@ module.exports = {
   plugins: [
     new ESLintPlugin({
       extensions: ['.ts', '.tsx'],
+    }),
+    new ModuleFederationPlugin({
+      /**
+       * Learn more about Webpack Module Federation:
+       * https://module-federation.io/guide/basic/webpack.html
+       */
+      name: 'micro1',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './CardAlpha': './components/CardAlpha/index',
+      },
+      shared: {
+        ...deps,
+        react: { singleton: true },
+        'react-dom': {
+          singleton: true,
+        },
+      },
     }),
     new HtmlPlugin({
       template: 'index.html',
