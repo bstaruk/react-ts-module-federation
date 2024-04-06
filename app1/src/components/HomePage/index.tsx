@@ -14,45 +14,45 @@ const cards = [
   {
     firstName: 'Wilma',
     lastName: 'Flintstone',
-    description: "Fred's wife and a loving mother to Pebbles",
+    description: "Fred's wife and a loving mother to Pebbles.",
   },
   {
     firstName: 'Barney',
     lastName: 'Rubble',
-    description: "Fred's best friend and next-door neighbor",
+    description: "Fred's best friend and next-door neighbor.",
   },
   {
     firstName: 'Betty',
     lastName: 'Rubble',
-    description: "Barney's wife and Wilma's best friend",
+    description: "Barney's wife and Wilma's best friend.",
   },
   {
     firstName: 'Pebbles',
     lastName: 'Flintstone',
-    description: "Fred and Wilma's daughter",
+    description: "Fred and Wilma's daughter.",
   },
   {
     firstName: 'Bamm-Bamm',
     lastName: 'Rubble',
     description:
-      "Barney and Betty's adopted son, known for his immense strength",
+      "Barney and Betty's adopted son, known for his immense strength.",
   },
   {
     firstName: 'Dino',
     lastName: '',
-    description: "The Flintstones' pet dinosaur",
+    description: "The Flintstones' pet dinosaur.",
   },
   {
     firstName: 'Mr.',
     lastName: 'Slate',
-    description: "Fred's hot-headed boss at the rock quarry",
+    description: "Fred's hot-headed boss at the rock quarry.",
   },
 ];
 
 const HomePage = () => {
   return (
     <Wrapper>
-      <TitleWrapper>Hello World</TitleWrapper>
+      <TitleWrapper>Meet The Flinstones</TitleWrapper>
       <CardList {...{ cards }} />
     </Wrapper>
   );

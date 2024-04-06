@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface WrapperProps {
-  isOpen?: boolean;
+  $isOpen?: boolean;
 }
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -10,7 +10,8 @@ export const Wrapper = styled.div<WrapperProps>`
   top: 0;
   width: 100%;
   height: 100%;
-  display: ${(p) => (p.isOpen ? 'flex' : 'none')};
+  display: ${(p) => (p.$isOpen ? 'flex' : 'none')};
+  backdrop-filter: blur(2px);
   flex-direction: column;
   justify-content: center;
   align-items: center;

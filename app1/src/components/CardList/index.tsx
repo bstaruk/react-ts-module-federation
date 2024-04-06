@@ -39,18 +39,20 @@ const CardList = ({ cards }: CardListProps) => {
         </li>
       ))}
 
-      <ModalAlpha
-        isOpen={activeCard !== undefined}
-        onClose={() => setActiveCard(undefined)}
-        title={
-          activeCard
-            ? `${activeCard.firstName} ${activeCard.lastName}`
-            : undefined
-        }
-      >
-        {!!activeCard?.description && <p>{activeCard.description}</p>}
-        <p>[contact form goes here]</p>
-      </ModalAlpha>
+      <React.Suspense>
+        <ModalAlpha
+          isOpen={activeCard !== undefined}
+          onClose={() => setActiveCard(undefined)}
+          title={
+            activeCard
+              ? `${activeCard.firstName} ${activeCard.lastName}`
+              : undefined
+          }
+        >
+          {!!activeCard?.description && <p>{activeCard.description}</p>}
+          <p>[contact form goes here]</p>
+        </ModalAlpha>
+      </React.Suspense>
     </Wrapper>
   );
 };

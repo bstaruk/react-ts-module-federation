@@ -14,7 +14,7 @@ const ModalAlpha = ({
   onClose,
   title,
 }: ModalAlphaProps): ReactNode => (
-  <Wrapper {...{ isOpen }}>
+  <Wrapper $isOpen={isOpen}>
     <Content>
       <Header>
         <Title>{title}</Title>

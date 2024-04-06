@@ -2,12 +2,16 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.ul`
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   max-width: 50rem;
-  padding: 2rem;
+  margin: 0 auto;
   list-style-type: none;
+
+  @media screen and (min-width: 760px) {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const DetailsButton = styled.button`
