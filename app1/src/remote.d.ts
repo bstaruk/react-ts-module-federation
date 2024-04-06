@@ -10,6 +10,15 @@ declare module 'micro1/CardAlpha' {
   export { CardAlphaProps, CardAlpha as default };
 }
 
+declare module 'micro1/ContactFormAlpha' {
+  interface ContactFormAlphaProps {
+    title: string;
+  }
+
+  const ContactFormAlpha: React.ComponentType<ContactFormAlphaProps>;
+  export { ContactFormAlphaProps, ContactFormAlpha as default };
+}
+
 declare module 'micro2/ModalAlpha' {
   interface ModalAlphaProps {
     children?: ReactNode;

@@ -43,7 +43,7 @@ const cards = [
     description: "The Flintstones' pet dinosaur.",
   },
   {
-    firstName: 'Mr.',
+    firstName: 'George',
     lastName: 'Slate',
     description: "Fred's hot-headed boss at the rock quarry.",
   },

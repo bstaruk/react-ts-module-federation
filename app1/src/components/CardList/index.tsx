@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Wrapper, DetailsButton } from './wrappers';
 
 const CardAlpha = React.lazy(() => import('micro1/CardAlpha'));
+const ContactFormAlpha = React.lazy(() => import('micro1/ContactFormAlpha'));
 const ModalAlpha = React.lazy(() => import('micro2/ModalAlpha'));
 
 type CardProps = {
@@ -50,7 +51,10 @@ const CardList = ({ cards }: CardListProps) => {
           }
         >
           {!!activeCard?.description && <p>{activeCard.description}</p>}
-          <p>[contact form goes here]</p>
+
+          <React.Suspense>
+            <ContactFormAlpha title={`Contact ${activeCard?.firstName}`} />
+          </React.Suspense>
         </ModalAlpha>
       </React.Suspense>
     </Wrapper>

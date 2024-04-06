@@ -66,6 +66,7 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         './CardAlpha': './components/CardAlpha/index',
+        './ContactFormAlpha': './components/ContactFormAlpha/index',
       },
       shared: {
         ...deps,
