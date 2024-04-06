@@ -53,7 +53,10 @@ const CardList = ({ cards }: CardListProps) => {
           {!!activeCard?.description && <p>{activeCard.description}</p>}
 
           <React.Suspense>
-            <ContactFormAlpha title={`Contact ${activeCard?.firstName}`} />
+            <ContactFormAlpha
+              key={activeCard?.firstName}
+              title={`Contact ${activeCard?.firstName}`}
+            />
           </React.Suspense>
         </ModalAlpha>
       </React.Suspense>

@@ -16,7 +16,11 @@ export const Wrapper = styled.div`
 
 export const TitleWrapper = styled.h1`
   color: ${(p) => p.theme.colors.wine};
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
+
+  @media screen and (min-width: 760px) {
+    font-size: 2.5rem;
+  }
 `;

@@ -1,5 +1,12 @@
 import React, { ReactNode } from 'react';
-import { Wrapper, Overlay, Content, Title, Header } from './wrappers';
+import {
+  CloseButton,
+  Content,
+  Header,
+  Overlay,
+  Title,
+  Wrapper,
+} from './wrappers';
 
 type ModalAlphaProps = {
   children?: ReactNode;
@@ -19,9 +26,9 @@ const ModalAlpha = ({
       <Header>
         <Title>{title}</Title>
 
-        <button type="button" onClick={() => onClose()}>
+        <CloseButton type="button" onClick={() => onClose()}>
           Close Modal
-        </button>
+        </CloseButton>
       </Header>
 
       {children}

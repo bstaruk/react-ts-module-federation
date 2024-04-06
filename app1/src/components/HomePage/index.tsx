@@ -37,22 +37,12 @@ const cards = [
     description:
       "Barney and Betty's adopted son, known for his immense strength.",
   },
-  {
-    firstName: 'Dino',
-    lastName: '',
-    description: "The Flintstones' pet dinosaur.",
-  },
-  {
-    firstName: 'George',
-    lastName: 'Slate',
-    description: "Fred's hot-headed boss at the rock quarry.",
-  },
 ];
 
 const HomePage = () => {
   return (
     <Wrapper>
-      <TitleWrapper>Meet The Flinstones</TitleWrapper>
+      <TitleWrapper>Meet The Flinstones (and Rubbles)</TitleWrapper>
       <CardList {...{ cards }} />
     </Wrapper>
   );

@@ -63,3 +63,18 @@ export const Title = styled.h3`
   letter-spacing: 0.03em;
   font-weight: 700;
 `;
+
+export const CloseButton = styled.button`
+  background-color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.wine};
+  border: 1px solid ${(p) => p.theme.colors.wine};
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
