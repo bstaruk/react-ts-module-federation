@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Wrapper, Content, Title } from './wrappers';
+import { Wrapper, Overlay, Content, Title, Header } from './wrappers';
 
 type ModalAlphaProps = {
   children?: ReactNode;
@@ -16,13 +16,18 @@ const ModalAlpha = ({
 }: ModalAlphaProps): ReactNode => (
   <Wrapper {...{ isOpen }}>
     <Content>
-      <button type="button" onClick={() => onClose()}>
-        Close Modal
-      </button>
+      <Header>
+        <Title>{title}</Title>
 
-      <Title>{title}</Title>
+        <button type="button" onClick={() => onClose()}>
+          Close Modal
+        </button>
+      </Header>
+
       {children}
     </Content>
+
+    <Overlay type="button" onClick={() => onClose()} />
   </Wrapper>
 );
 

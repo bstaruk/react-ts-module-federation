@@ -12,18 +12,48 @@ export const Wrapper = styled.div<WrapperProps>`
   height: 100%;
   display: ${(p) => (p.isOpen ? 'flex' : 'none')};
   flex-direction: column;
-  background-color: ${(p) => p.theme.colors.wine};
+  justify-content: center;
+  align-items: center;
   padding: 1.5rem;
 `;
 
-export const Content = styled.div`
+export const Overlay = styled.button`
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  background-color: ${(p) => p.theme.colors.wine};
+  opacity: 0.8;
+  text-indent: -99999em;
+  overflow: hidden;
+  outline: none;
+  border: 0;
+`;
+
+export const Content = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
-  column-gap: 1rem;
-  border: 1px solid ${(p) => p.theme.colors.wine};
+  row-gap: 3rem;
+  background-color: ${(p) => p.theme.colors.white};
   padding: 1.5rem;
   border-radius: 0.375rem;
+`;
+
+export const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 2rem;
+
+  button {
+    flex-shrink: 0;
+    padding: 0.5rem;
+  }
 `;
 
 export const Title = styled.h3`
