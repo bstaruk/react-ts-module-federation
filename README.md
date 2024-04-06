@@ -6,23 +6,22 @@ This is a little sandbox that I built to learn about and play around with Webpac
 
 This project consists of 2 micro front-ends, and 2 proof of concept apps which utilize the micro front-ends in different ways:
 
-* `micro1` contains two components: `CardAlpha` and `ContactFormAlpha`
-* `micro2` contains one component: `ModalAlpha`
-* `app1` shows a grid of contact info cards (`CardAlpha`), which trigger modals (`ModalAlpha`) containing a dummy contact form (`ContactFormAlpha`).
-* `app2` shows a list of article cards (`CardAlpha`), which trigger modals (`ModalAlpha`) containing more details about the article.
+* _micro1_ contains two components: `CardAlpha` and `ContactFormAlpha`
+* _micro2_ contains one component: `ModalAlpha`
+* _app1_ shows a grid of contact info cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing a dummy contact form (`micro1/ContactFormAlpha`).
+* _app2_ shows a list of article cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing more details about the article.
 
 ## Running Locally
 
-This project was only setup to run locally for now, but it could be deployed to a Jamstack environment by swapping out the `remotes` paths in each app's Webpack config.
+This project uses [NPM Workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) so all commands can be run at the root of the main project without needing to traverse the subfolders:
 
-To run everything locally:
-
-1. Ensure you are using the right version of Node with `nvm use` in the project root.
-2. Start the `micro1` dev server with: `cd micro1 && npm install && npm run start`
+1. Ensure you are using the right version of Node (v20) with `nvm use`.
+2. Install dependencies with `npm install --workspaces`
+2. Start the _micro1_ dev server with: `npm run start-micro1`
     * Runs at [http://localhost:3030](http://localhost:3030)
-3. Start the `micro2` dev server with: `cd micro2 && npm install && npm run start`
+3. Start the _micro2_ dev server with: `npm run start-micro2`
     * Runs at [http://localhost:3031](http://localhost:3031)
-4. (Optional) Start the `app1` dev server with `cd app1 && npm install && npm run start`
+4. (Optional) Start the _app1_ dev server with `npm run start-app1`
     * Runs at [http://localhost:3000](http://localhost:3000)
-5. (Optional) Start the `app2` dev server with `cd app2 && npm install && npm run start`
+5. (Optional) Start the _app2_ dev server with `npm run start-app2`
     * Runs at [http://localhost:3001](http://localhost:3001)
