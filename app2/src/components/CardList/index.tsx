@@ -27,14 +27,11 @@ const CardList = ({ cards }: CardListProps) => {
         <li key={cardIndex}>
           <React.Suspense fallback={<p>Loading...</p>}>
             <CardAlpha title={card.title}>
-              <div>
-                <DetailsButton
-                  type="button"
-                  onClick={() => setActiveCard(card)}
-                >
-                  Learn more
-                </DetailsButton>
-              </div>
+              <p>{card.description}</p>
+              <DetailsButton type="button" onClick={() => setActiveCard(card)}>
+                Learn more about Season {card.season}, Episode{' '}
+                {card.episodeNumber}
+              </DetailsButton>
             </CardAlpha>
           </React.Suspense>
         </li>
