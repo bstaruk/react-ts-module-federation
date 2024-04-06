@@ -7,11 +7,13 @@
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
+    "noEmit": false,
     "outDir": "./dist/",
     "paths": {
       "components/*": ["components/*"],
       "styles/*": ["styles/*"]
     },
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es6"
