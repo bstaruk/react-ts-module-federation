@@ -1,7 +1,10 @@
 ///<reference types="react" />
 
 declare module 'micro1/CardAlpha' {
-  const CardAlpha: React.ComponentType;
+  interface Props {
+    title: string;
+  }
 
+  const CardAlpha: React.ComponentType<Props>;
   export default CardAlpha;
 }

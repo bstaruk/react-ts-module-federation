@@ -8,7 +8,7 @@ const HomePage = () => {
     <Wrapper>
       <TitleWrapper>Hello World</TitleWrapper>
       <React.Suspense fallback={<p>Loading...</p>}>
-        <CardAlpha />
+        <CardAlpha title="Test" />
       </React.Suspense>
     </Wrapper>
   );
