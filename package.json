@@ -1,0 +1,17 @@
+{
+  "name": "react-ts-module-federation",
+  "version": "0.0.1",
+  "author": "Brian Staruk <brian@staruk.net>",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "start-app1": "npm run start --workspace=app1",
+    "start-app2": "npm run start --workspace=app2",
+    "start-micro1": "npm run start --workspace=micro1",
+    "start-micro2": "npm run start --workspace=micro2"
+  },
+  "workspaces": ["micro1", "micro2", "app1", "app2"],
+  "engines": {
+    "node": ">=20"
+  }
+}
