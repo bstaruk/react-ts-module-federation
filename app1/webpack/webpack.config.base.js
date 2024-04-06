@@ -65,6 +65,7 @@ module.exports = {
       name: 'app1',
       remotes: {
         micro1: 'micro1@http://localhost:3030/remoteEntry.js',
+        micro2: 'micro2@http://localhost:3031/remoteEntry.js',
       },
       shared: {
         ...deps,
