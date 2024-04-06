@@ -1,13 +1,13 @@
-# React & TypeScript Module Federation Demo
+# React & TypeScript Micro Front-Ends via Webpack Module Federation
 
-This is a little sandbox that I built to learn about and play around with Webpack Module Federation, using React and TypeScript of course.
+This is a little proof of concept that I built to learn more about micro front-ends and Webpack Module Federation, using React & TypeScript.
 
 ## Overview
 
-This project consists of 2 micro front-ends, and 2 proof of concept apps which utilize the micro front-ends in different ways:
+This project consists of 2 micro front-ends, and 2 apps which utilize components from the micro front-ends in different ways:
 
-* **_micro1_** contains two components: `CardAlpha` and `ContactFormAlpha`
-* **_micro2_** contains one component: `ModalAlpha`
+* **_micro1_** exposes 2 components: `CardAlpha` and `ContactFormAlpha`
+* **_micro2_** exposes 1 component: `ModalAlpha`
 * **_app1_** shows a grid of contact info cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing a dummy contact form (`micro1/ContactFormAlpha`).
 * **_app2_** shows a list of article cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing more details about the article.
 
