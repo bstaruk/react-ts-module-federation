@@ -1,14 +1,26 @@
 import React from 'react';
-import { Wrapper, TitleWrapper } from './wrappers';
+import CardList from 'components/CardList';
 
-const CardAlpha = React.lazy(() => import('micro1/CardAlpha'));
+import { Wrapper, TitleWrapper } from './wrappers';
 
 const HomePage = () => {
   return (
     <Wrapper>
       <TitleWrapper>Hello World</TitleWrapper>
       <React.Suspense fallback={<p>Loading...</p>}>
-        <CardAlpha title="Test" />
+        <CardList
+          cards={[
+            {
+              title: 'Test 1',
+            },
+            {
+              title: 'Test 2',
+            },
+            {
+              title: 'Test 3',
+            },
+          ]}
+        />
       </React.Suspense>
     </Wrapper>
   );
