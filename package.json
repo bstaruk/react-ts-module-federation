@@ -5,10 +5,16 @@
   "description": "",
   "license": "MIT",
   "scripts": {
+    "build-app1": "npm run build --workspace=app1",
+    "build-app2": "npm run build --workspace=app2",
+    "build-micro1": "npm run build --workspace=micro1",
+    "build-micro2": "npm run build --workspace=micro2",
     "start-app1": "npm run start --workspace=app1",
     "start-app2": "npm run start --workspace=app2",
     "start-micro1": "npm run start --workspace=micro1",
-    "start-micro2": "npm run start --workspace=micro2"
+    "start-micro2": "npm run start --workspace=micro2",
+    "format-all": "npm run format --workspaces",
+    "lint-all": "npm run lint --workspaces"
   },
   "workspaces": ["micro1", "micro2", "app1", "app2"],
   "engines": {
