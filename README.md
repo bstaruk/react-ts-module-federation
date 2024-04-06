@@ -19,6 +19,10 @@ To run everything locally:
 
 1. Ensure you are using the right version of Node with `nvm use` in the project root.
 2. Start the `micro1` dev server with: `cd micro1 && npm install && npm run start`
+  * Runs at [http://localhost:3030](http://localhost:3030)
 3. Start the `micro2` dev server with: `cd micro2 && npm install && npm run start`
+  * Runs at [http://localhost:3031](http://localhost:3031)
 4. (Optional) Start the `app1` dev server with `cd app1 && npm install && npm run start`
+  * Runs at [http://localhost:3000](http://localhost:3000)
 5. (Optional) Start the `app2` dev server with `cd app2 && npm install && npm run start`
+  * Runs at [http://localhost:3001](http://localhost:3001)
