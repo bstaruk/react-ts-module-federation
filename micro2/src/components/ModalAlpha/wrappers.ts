@@ -38,7 +38,7 @@ export const Content = styled.div`
   max-width: 50rem;
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
+  row-gap: 1rem;
   background-color: ${(p) => p.theme.colors.white};
   padding: 1.5rem;
   border-radius: 0.375rem;

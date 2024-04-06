@@ -15,7 +15,7 @@ declare module 'micro2/ModalAlpha' {
     children?: ReactNode;
     isOpen?: boolean;
     onClose: () => void;
-    title: string;
+    title?: string;
   }
 
   const ModalAlpha: React.ComponentType<ModalAlphaProps>;

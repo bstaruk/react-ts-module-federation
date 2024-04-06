@@ -5,14 +5,14 @@ type ModalAlphaProps = {
   children?: ReactNode;
   isOpen?: boolean;
   onClose: () => void;
-  title: string;
+  title?: string;
 };
 
 const ModalAlpha = ({
   children,
   isOpen,
   onClose,
-  title = 'Hello World',
+  title,
 }: ModalAlphaProps): ReactNode => (
   <Wrapper {...{ isOpen }}>
     <Content>

@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  column-gap: 1rem;
+  row-gap: 1rem;
   border: 1px solid ${(p) => p.theme.colors.wine};
   padding: 1.5rem;
   border-radius: 0.375rem;
