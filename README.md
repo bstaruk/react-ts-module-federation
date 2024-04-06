@@ -9,7 +9,7 @@ This project consists of 2 micro front-ends, and 2 proof of concept apps which u
 * `micro1` contains two components: `CardAlpha` and `ContactFormAlpha`
 * `micro2` contains one component: `ModalAlpha`
 * `app1` shows a grid of contact info cards (`CardAlpha`), which trigger modals (`ModalAlpha`) containing a dummy contact form (`ContactFormAlpha`).
-* `app2` shows a list of news article cards (`CardAlpha`), which trigger modals (`ModalAlpha`) containing more details about the article.
+* `app2` shows a list of article cards (`CardAlpha`), which trigger modals (`ModalAlpha`) containing more details about the article.
 
 ## Running Locally
 
