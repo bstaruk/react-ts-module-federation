@@ -2,7 +2,7 @@
   "name": "react-ts-module-federation",
   "version": "0.0.1",
   "author": "Brian Staruk <brian@staruk.net>",
-  "description": "",
+  "description": "A proof of concept for micro front-ends via Webpack Module Federation, using React & TypeScript.",
   "license": "MIT",
   "scripts": {
     "build-app1": "npm run build --workspace=app1",
