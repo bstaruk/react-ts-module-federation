@@ -2,6 +2,8 @@
 
 This is a little proof of concept that I built to learn more about micro front-ends and Webpack [Module Federation](https://module-federation.io), using React & TypeScript.
 
+---
+
 ## Overview
 
 This project consists of 2 micro front-ends, and 2 apps which utilize components from the micro front-ends in different ways:
@@ -10,6 +12,8 @@ This project consists of 2 micro front-ends, and 2 apps which utilize components
 * **_micro2_** exposes 1 component: `ModalAlpha`
 * **_app1_** shows a grid of contact info cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing a dummy contact form (`micro1/ContactFormAlpha`).
 * **_app2_** shows a list of article cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing more details about the article.
+
+---
 
 ## Running Locally
 
