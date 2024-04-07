@@ -43,7 +43,16 @@ const CardList = ({ cards }: CardListProps) => {
           onClose={() => setActiveCard(undefined)}
           title={activeCard?.title}
         >
-          {!!activeCard?.description && <p>{activeCard.description}</p>}
+          {!!activeCard && (
+            <>
+              <p>
+                <strong>
+                  Season {activeCard.season}, Episode {activeCard.episodeNumber}
+                </strong>
+              </p>
+              <p>{activeCard.description}</p>
+            </>
+          )}
         </ModalAlpha>
       </React.Suspense>
     </Wrapper>
