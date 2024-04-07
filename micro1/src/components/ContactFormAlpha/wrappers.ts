@@ -22,16 +22,21 @@ export const Wrapper = styled.form`
 `;
 
 export const Title = styled.h4`
-  color: ${(p) => p.theme.colors.wine};
-  font-size: 1.375rem;
+  color: ${(p) => p.theme.colors.black};
+  font-size: 1.25rem;
   letter-spacing: 0.03em;
   font-weight: 700;
 `;
 
 export const Label = styled.label`
+  font-family: ${(p) => p.theme.fonts.sans};
   display: flex;
   flex-direction: column;
   row-gap: 0.375rem;
+
+  span {
+    letter-spacing: 0.02rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -65,6 +70,8 @@ export const TextArea = styled.textarea`
 `;
 
 export const SubmitButton = styled.button`
+  font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 1rem;
   background-color: ${(p) => p.theme.colors.wine};
   color: ${(p) => p.theme.colors.white};
   border: 0;

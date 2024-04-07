@@ -15,6 +15,9 @@ export const Wrapper = styled.ul`
 `;
 
 export const DetailsButton = styled.button`
+  font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 0.875rem;
+  letter-spacing: 0.02rem;
   background-color: ${(p) => p.theme.colors.wine};
   color: ${(p) => p.theme.colors.white};
   border: 0;
