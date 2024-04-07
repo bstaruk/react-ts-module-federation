@@ -11,7 +11,9 @@ This project consists of 2 micro front-ends, and 2 apps which utilize components
 * **_micro1_** exposes 2 components: `CardAlpha` and `ContactFormAlpha`
 * **_micro2_** exposes 1 component: `ModalAlpha`
 * **_app1_** shows a grid of contact info cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing a dummy contact form (`micro1/ContactFormAlpha`).
-* **_app2_** shows a list of article cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing more details about the article.
+* **_app2_** shows a list of cards (`micro1/CardAlpha`), which trigger modals (`micro2/ModalAlpha`) containing more details.
+
+We are using [styled-components](https://styled-components.com) to apply different themes to the micro front-ends on each app. This same concept could be implemented using Tailwind CSS as well.
 
 ---
 
