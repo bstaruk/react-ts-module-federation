@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SuccessWrapper = styled.div`
   width: 100%;
   display: flex;
-  border: 1px solid ${(p) => p.theme.colors.wine};
+  border: 2px solid ${(p) => p.theme.colors.red};
   border-radius: 0.375rem;
   padding: 1rem;
   font-family: ${(p) => p.theme.fonts.sans};
@@ -16,16 +16,16 @@ export const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  border: 1px solid ${(p) => p.theme.colors.wine};
+  border: 2px solid ${(p) => p.theme.colors.red};
   border-radius: 0.375rem;
   padding: 1rem;
 `;
 
 export const Title = styled.h4`
-  color: ${(p) => p.theme.colors.black};
+  font-family: ${(p) => p.theme.fonts.serif};
   font-size: 1.25rem;
-  letter-spacing: 0.03em;
   font-weight: 700;
+  color: ${(p) => p.theme.colors.black};
 `;
 
 export const Label = styled.label`
@@ -33,10 +33,6 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   row-gap: 0.375rem;
-
-  span {
-    letter-spacing: 0.02rem;
-  }
 `;
 
 export const Input = styled.input`
@@ -51,7 +47,7 @@ export const Input = styled.input`
   border-radius: 0.25rem;
 
   &:focus {
-    border-color: ${(p) => p.theme.colors.wine};
+    border-color: ${(p) => p.theme.colors.red};
   }
 `;
 
@@ -67,14 +63,14 @@ export const TextArea = styled.textarea`
   border-radius: 0.25rem;
 
   &:focus {
-    border-color: ${(p) => p.theme.colors.wine};
+    border-color: ${(p) => p.theme.colors.red};
   }
 `;
 
 export const SubmitButton = styled.button`
   font-family: ${(p) => p.theme.fonts.sans};
   font-size: 1rem;
-  background-color: ${(p) => p.theme.colors.wine};
+  background-color: ${(p) => p.theme.colors.red};
   color: ${(p) => p.theme.colors.white};
   border: 0;
   cursor: pointer;

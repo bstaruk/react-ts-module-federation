@@ -24,7 +24,7 @@ export const Overlay = styled.button`
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: ${(p) => p.theme.colors.black};
+  background-color: ${(p) => p.theme.colors.navy};
   opacity: 0.8;
   text-indent: -99999em;
   overflow: hidden;
@@ -72,19 +72,20 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h3`
-  color: ${(p) => p.theme.colors.wine};
+  font-family: ${(p) => p.theme.fonts.serif};
   font-size: 1.5rem;
-  letter-spacing: 0.03em;
   font-weight: 700;
+  color: ${(p) => p.theme.colors.navy};
 `;
 
 export const CloseButton = styled.button`
+  font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 0.875rem;
   background-color: ${(p) => p.theme.colors.white};
-  color: ${(p) => p.theme.colors.black};
-  border: 2px solid ${(p) => p.theme.colors.wine};
+  color: ${(p) => p.theme.colors.red};
+  border: 2px solid ${(p) => p.theme.colors.red};
   border-radius: 0.375rem;
   padding: 0.75rem 1.25rem;
-  font-size: 0.875rem;
   letter-spacing: 0.03em;
   font-weight: 700;
   cursor: pointer;

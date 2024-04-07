@@ -15,9 +15,10 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.h1`
-  color: ${(p) => p.theme.colors.wine};
+  font-family: ${(p) => p.theme.fonts.serif};
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: ${(p) => p.theme.colors.navy};
   text-align: center;
 
   @media screen and (min-width: 760px) {

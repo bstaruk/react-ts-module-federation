@@ -16,14 +16,14 @@ export const Wrapper = styled.ul`
 
 export const DetailsButton = styled.button`
   font-family: ${(p) => p.theme.fonts.sans};
-  font-size: 0.875rem;
-  letter-spacing: 0.02rem;
-  background-color: ${(p) => p.theme.colors.wine};
+  font-size: 1rem;
+  font-weight: 700;
   color: ${(p) => p.theme.colors.white};
+  background-color: ${(p) => p.theme.colors.red};
   border: 0;
-  cursor: pointer;
-  padding: 0.75rem 1rem;
   border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;

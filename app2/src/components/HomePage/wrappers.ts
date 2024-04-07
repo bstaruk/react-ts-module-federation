@@ -15,12 +15,13 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.h1`
-  color: ${(p) => p.theme.colors.wine};
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: ${(p) => p.theme.fonts.serif};
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: ${(p) => p.theme.colors.navy};
   text-align: center;
 
   @media screen and (min-width: 760px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 `;

@@ -2,10 +2,13 @@ const theme = {
   colors: {
     black: '#111',
     white: '#fff',
-    wine: '#bf4f74',
+    gray: '#f8f8f8',
+    navy: '#0c2340',
+    red: '#bd3039',
   },
   fonts: {
-    sans: '"PT Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    sans: '"Mulish", sans-serif',
+    serif: '"Merriweather", serif',
   },
 };
 
