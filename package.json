@@ -13,11 +13,21 @@
     "start-app2": "npm run start --workspace=app2",
     "start-micro1": "npm run start --workspace=micro1",
     "start-micro2": "npm run start --workspace=micro2",
+    "build-all": "npm run build --workspaces",
     "format-all": "npm run format --workspaces",
-    "lint-all": "npm run lint --workspaces"
+    "lint-all": "npm run lint --workspaces",
+    "start-all": "concurrently \"npm:start-micro1\" \"npm:start-micro2\" \"npm:start-app1\" \"npm:start-app2\""
   },
-  "workspaces": ["micro1", "micro2", "app1", "app2"],
+  "workspaces": [
+    "micro1",
+    "micro2",
+    "app1",
+    "app2"
+  ],
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
