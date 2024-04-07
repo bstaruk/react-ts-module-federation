@@ -14,6 +14,7 @@ declare module 'micro2/ModalAlpha' {
   interface ModalAlphaProps {
     children?: ReactNode;
     isOpen?: boolean;
+    maxWidth?: string | number;
     onClose: () => void;
     title?: string;
   }

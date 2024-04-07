@@ -22,7 +22,6 @@ const CardList = ({ cards }: CardListProps) => {
 
   return (
     <Wrapper>
-      {/* TODO: Show a "skeleton card" as a fallback */}
       {cards.map((card, cardIndex) => (
         <li key={cardIndex}>
           <React.Suspense fallback={<p>Loading...</p>}>
@@ -40,6 +39,7 @@ const CardList = ({ cards }: CardListProps) => {
       <React.Suspense>
         <ModalAlpha
           isOpen={activeCard !== undefined}
+          maxWidth={40}
           onClose={() => setActiveCard(undefined)}
           title={activeCard?.title}
         >

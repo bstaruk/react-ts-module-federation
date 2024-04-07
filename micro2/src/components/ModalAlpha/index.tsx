@@ -11,6 +11,7 @@ import {
 type ModalAlphaProps = {
   children?: ReactNode;
   isOpen?: boolean;
+  maxWidth?: string | number;
   onClose: () => void;
   title?: string;
 };
@@ -18,6 +19,7 @@ type ModalAlphaProps = {
 const ModalAlpha = ({
   children,
   isOpen,
+  maxWidth,
   onClose,
   title,
 }: ModalAlphaProps): ReactNode => (
@@ -27,7 +29,7 @@ const ModalAlpha = ({
     aria-hidden={!isOpen}
     $isOpen={!!isOpen}
   >
-    <Content>
+    <Content $maxWidth={maxWidth}>
       <Header>
         <Title>{title}</Title>
 

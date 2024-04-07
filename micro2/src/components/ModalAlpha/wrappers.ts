@@ -32,11 +32,25 @@ export const Overlay = styled.button`
   border: 0;
 `;
 
-export const Content = styled.div`
+interface ContentProps {
+  $maxWidth?: string | number;
+}
+
+export const Content = styled.div<ContentProps>`
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 50rem;
+  max-width: ${(p) => {
+    if (typeof p.$maxWidth === 'number') {
+      return `${p.$maxWidth}rem`;
+    }
+
+    if (typeof p.$maxWidth === 'string') {
+      return p.$maxWidth;
+    }
+
+    return '50rem';
+  }};
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
