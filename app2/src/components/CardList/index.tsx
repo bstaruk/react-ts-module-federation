@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Wrapper, DetailsButton } from './wrappers';
+import { Wrapper, DetailsButton, DetailsContent } from './wrappers';
 
 const CardAlpha = React.lazy(() => import('micro1/CardAlpha'));
 const ModalAlpha = React.lazy(() => import('micro2/ModalAlpha'));
 
 type CardProps = {
-  season: number;
-  episodeNumber: number;
-  title: string;
-  description: string;
+  firstName: string;
+  lastName: string;
+  position: string;
+  hometown: string;
+  handedness: string;
+  debutYear: number;
 };
 
 type CardListProps = {
@@ -25,11 +27,17 @@ const CardList = ({ cards }: CardListProps) => {
       {cards.map((card, cardIndex) => (
         <li key={cardIndex}>
           <React.Suspense fallback={<p>Loading...</p>}>
-            <CardAlpha title={card.title}>
-              <p>{card.description}</p>
+            <CardAlpha
+              title={`${card.firstName} ${card.lastName} (${card.position})`}
+            >
+              <DetailsContent>
+                <p>
+                  Debuted in {card.debutYear} from {card.hometown}.
+                </p>
+              </DetailsContent>
+
               <DetailsButton type="button" onClick={() => setActiveCard(card)}>
-                Learn more about Season {card.season}, Episode{' '}
-                {card.episodeNumber}
+                Learn more about {card.firstName} {card.lastName}
               </DetailsButton>
             </CardAlpha>
           </React.Suspense>
@@ -39,19 +47,25 @@ const CardList = ({ cards }: CardListProps) => {
       <React.Suspense>
         <ModalAlpha
           isOpen={activeCard !== undefined}
-          maxWidth={40}
+          maxWidth={32}
           onClose={() => setActiveCard(undefined)}
-          title={activeCard?.title}
+          title={`${activeCard?.firstName} ${activeCard?.lastName}`}
         >
           {!!activeCard && (
-            <>
+            <DetailsContent>
               <p>
-                <strong>
-                  Season {activeCard.season}, Episode {activeCard.episodeNumber}
-                </strong>
+                <strong>Position:</strong> {activeCard.position}
               </p>
-              <p>{activeCard.description}</p>
-            </>
+              <p>
+                <strong>Batting:</strong> {activeCard.handedness}
+              </p>
+              <p>
+                <strong>Hometown:</strong> {activeCard.hometown}
+              </p>
+              <p>
+                <strong>Debut Year:</strong> {activeCard.debutYear}
+              </p>
+            </DetailsContent>
           )}
         </ModalAlpha>
       </React.Suspense>

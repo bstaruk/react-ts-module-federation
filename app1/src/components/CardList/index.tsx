@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wrapper, DetailsButton } from './wrappers';
+import { Wrapper, DetailsButton, DetailsContent } from './wrappers';
 
 const CardAlpha = React.lazy(() => import('micro1/CardAlpha'));
 const ContactFormAlpha = React.lazy(() => import('micro1/ContactFormAlpha'));
@@ -8,7 +8,9 @@ const ModalAlpha = React.lazy(() => import('micro2/ModalAlpha'));
 type CardProps = {
   firstName: string;
   lastName: string;
-  description: string;
+  jobDescription: string;
+  jobTitle: string;
+  joinedYear: number;
 };
 
 type CardListProps = {
@@ -27,14 +29,17 @@ const CardList = ({ cards }: CardListProps) => {
         <li key={cardIndex}>
           <React.Suspense fallback={<p>Loading...</p>}>
             <CardAlpha title={`${card.firstName} ${card.lastName}`}>
-              <div>
+              <DetailsContent>
+                <p>
+                  {card.jobTitle} since {card.joinedYear}
+                </p>
                 <DetailsButton
                   type="button"
                   onClick={() => setActiveCard(card)}
                 >
                   Contact {card.firstName}
                 </DetailsButton>
-              </div>
+              </DetailsContent>
             </CardAlpha>
           </React.Suspense>
         </li>
@@ -42,11 +47,19 @@ const CardList = ({ cards }: CardListProps) => {
 
       <React.Suspense>
         <ModalAlpha
+          closeLabel="Cancel"
           isOpen={activeCard !== undefined}
           onClose={() => setActiveCard(undefined)}
-          title={`${activeCard?.firstName} ${activeCard?.lastName}`}
+          title={`${activeCard?.firstName} ${activeCard?.lastName} -  ${activeCard?.jobTitle}`}
         >
-          {!!activeCard?.description && <p>{activeCard.description}</p>}
+          {!!activeCard && (
+            <DetailsContent>
+              <p>
+                <em>Joined in {activeCard.joinedYear}</em>
+              </p>
+              <p>{activeCard.jobDescription}</p>
+            </DetailsContent>
+          )}
 
           <React.Suspense>
             <ContactFormAlpha

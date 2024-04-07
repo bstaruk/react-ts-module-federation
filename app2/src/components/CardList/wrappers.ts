@@ -29,3 +29,11 @@ export const DetailsButton = styled.button`
     text-decoration: underline;
   }
 `;
+
+export const DetailsContent = styled.div`
+  font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+`;
