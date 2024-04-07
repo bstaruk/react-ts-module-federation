@@ -11,7 +11,7 @@ export const Wrapper = styled.div<WrapperProps>`
   width: 100%;
   height: 100%;
   display: ${(p) => (p.$isOpen ? 'flex' : 'none')};
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@ export const Overlay = styled.button`
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: ${(p) => p.theme.colors.foreground};
+  background-color: #111;
   opacity: 0.8;
   text-indent: -99999em;
   overflow: hidden;
@@ -54,7 +54,7 @@ export const Content = styled.div<ContentProps>`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  background-color: ${(p) => p.theme.colors.background};
+  background-color: ${(p) => p.theme.colors.selection};
   padding: 1.5rem;
   border-radius: 0.375rem;
 `;

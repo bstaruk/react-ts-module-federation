@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const SuccessWrapper = styled.div`
   width: 100%;
   display: flex;
+  background-color: ${(p) => p.theme.colors.background};
   border: 2px solid ${(p) => p.theme.colors.secondary};
   border-radius: 0.375rem;
   padding: 1rem;
   font-family: ${(p) => p.theme.fonts.sans};
-  color: ${(p) => p.theme.colors.foreground};
+  color: ${(p) => p.theme.colors.primary};
   font-style: italic;
 `;
 
@@ -16,6 +17,7 @@ export const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  background-color: ${(p) => p.theme.colors.background};
   border: 2px solid ${(p) => p.theme.colors.secondary};
   border-radius: 0.375rem;
   padding: 1rem;
