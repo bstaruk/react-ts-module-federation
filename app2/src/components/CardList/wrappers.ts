@@ -5,7 +5,7 @@ export const Wrapper = styled.ul`
   flex-direction: column;
   row-gap: 1rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: 35rem;
   margin: 0 auto;
   list-style-type: none;
 
