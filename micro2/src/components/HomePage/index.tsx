@@ -6,17 +6,19 @@ const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   return (
-    <Wrapper>
-      <button type="button" onClick={() => setModalIsOpen(true)}>
-        Open Modal
-      </button>
+    <>
+      <Wrapper>
+        <button type="button" onClick={() => setModalIsOpen(true)}>
+          Open Modal
+        </button>
+      </Wrapper>
 
       <ModalAlpha
         isOpen={modalIsOpen}
         onClose={() => setModalIsOpen(false)}
         title="Hello World"
       />
-    </Wrapper>
+    </>
   );
 };
 
