@@ -24,7 +24,7 @@ export const Overlay = styled.button`
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: ${(p) => p.theme.colors.navy};
+  background-color: ${(p) => p.theme.colors.foreground};
   opacity: 0.8;
   text-indent: -99999em;
   overflow: hidden;
@@ -54,7 +54,7 @@ export const Content = styled.div<ContentProps>`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  background-color: ${(p) => p.theme.colors.white};
+  background-color: ${(p) => p.theme.colors.background};
   padding: 1.5rem;
   border-radius: 0.375rem;
 `;
@@ -75,15 +75,15 @@ export const Title = styled.h3`
   font-family: ${(p) => p.theme.fonts.serif};
   font-size: 1.5rem;
   font-weight: 700;
-  color: ${(p) => p.theme.colors.navy};
+  color: ${(p) => p.theme.colors.primary};
 `;
 
 export const CloseButton = styled.button`
   font-family: ${(p) => p.theme.fonts.sans};
   font-size: 0.875rem;
-  background-color: ${(p) => p.theme.colors.white};
-  color: ${(p) => p.theme.colors.red};
-  border: 2px solid ${(p) => p.theme.colors.red};
+  background-color: ${(p) => p.theme.colors.background};
+  color: ${(p) => p.theme.colors.secondary};
+  border: 2px solid ${(p) => p.theme.colors.secondary};
   border-radius: 0.375rem;
   padding: 0.75rem 1.25rem;
   letter-spacing: 0.03em;

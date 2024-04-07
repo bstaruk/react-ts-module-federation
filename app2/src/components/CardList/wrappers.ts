@@ -18,8 +18,8 @@ export const DetailsButton = styled.button`
   font-family: ${(p) => p.theme.fonts.sans};
   font-size: 0.875rem;
   letter-spacing: 0.02rem;
-  background-color: ${(p) => p.theme.colors.red};
-  color: ${(p) => p.theme.colors.white};
+  background-color: ${(p) => p.theme.colors.secondary};
+  color: ${(p) => p.theme.colors.background};
   border: 0;
   cursor: pointer;
   padding: 0.75rem 1rem;

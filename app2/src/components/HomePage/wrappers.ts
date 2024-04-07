@@ -18,7 +18,7 @@ export const TitleWrapper = styled.h1`
   font-family: ${(p) => p.theme.fonts.serif};
   font-size: 1.75rem;
   font-weight: 700;
-  color: ${(p) => p.theme.colors.navy};
+  color: ${(p) => p.theme.colors.primary};
   text-align: center;
 
   @media screen and (min-width: 760px) {
