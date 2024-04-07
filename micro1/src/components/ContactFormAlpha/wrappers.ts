@@ -30,6 +30,8 @@ export const Title = styled.h4`
 
 export const Label = styled.label`
   font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 1rem;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   row-gap: 0.375rem;
@@ -37,11 +39,10 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 1rem;
+  font-weight: 400;
   color: ${(p) => p.theme.colors.black};
   border: 1px solid #333;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-  font-weight: 400;
   outline: none;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
@@ -53,11 +54,10 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   font-family: ${(p) => p.theme.fonts.sans};
+  font-size: 1rem;
+  font-weight: 400;
   color: ${(p) => p.theme.colors.black};
   border: 1px solid #333;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-  font-weight: 400;
   outline: none;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
