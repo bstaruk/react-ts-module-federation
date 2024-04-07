@@ -21,7 +21,12 @@ const ModalAlpha = ({
   onClose,
   title,
 }: ModalAlphaProps): ReactNode => (
-  <Wrapper $isOpen={isOpen}>
+  <Wrapper
+    role="alertdialog"
+    aria-modal="true"
+    aria-hidden={!isOpen}
+    $isOpen={!!isOpen}
+  >
     <Content>
       <Header>
         <Title>{title}</Title>
