@@ -40,3 +40,15 @@ If you prefer starting each dev server individually:
 2. Start the **_micro2_** dev server with: `npm run start-micro2`
 3. (Optional) Start the **_app1_** dev server with `npm run start-app1`
 4. (Optional) Start the **_app2_** dev server with `npm run start-app2`
+
+---
+
+## Deploying Remotely
+
+This project could pretty easily be deployed to Jamstack hosting environments:
+
+1. Update the `remotes` the webpack configs for **_app1_** & **_app2_**.
+    * It would be a good idea to put these into environment variables.
+2. Build the packages:
+    * To build them all at once, run `npm run build-all` from the project root.
+    * To build individually, run `npm run build` in each package folder.
