@@ -23,16 +23,16 @@ This project uses [NPM workspaces](https://docs.npmjs.com/cli/v10/using-npm/work
 After installing dependencies, you can start the entire demo with one command using [concurrently](https://github.com/open-cli-tools/concurrently):
 
 1. `npm run start-all`
+    * **_micro1_** runs at [http://localhost:3030](http://localhost:3030)
+    * **_micro2_** runs at [http://localhost:3031](http://localhost:3031)
+    * **_app1_** runs at [http://localhost:3000](http://localhost:3000)
+    * **_app2_** runs at [http://localhost:3001](http://localhost:3001)
 
 ### Starting Each Server Manually
 
 If you prefer starting each dev server individually:
 
 1. Start the **_micro1_** dev server with: `npm run start-micro1`
-    * Runs at [http://localhost:3030](http://localhost:3030)
 2. Start the **_micro2_** dev server with: `npm run start-micro2`
-    * Runs at [http://localhost:3031](http://localhost:3031)
 3. (Optional) Start the **_app1_** dev server with `npm run start-app1`
-    * Runs at [http://localhost:3000](http://localhost:3000)
 4. (Optional) Start the **_app2_** dev server with `npm run start-app2`
-    * Runs at [http://localhost:3001](http://localhost:3001)
