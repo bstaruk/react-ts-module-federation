@@ -48,6 +48,7 @@ export const Input = styled.input`
   font-weight: 400;
   outline: none;
   padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
 
   &:focus {
     border-color: ${(p) => p.theme.colors.wine};
@@ -63,6 +64,7 @@ export const TextArea = styled.textarea`
   font-weight: 400;
   outline: none;
   padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
 
   &:focus {
     border-color: ${(p) => p.theme.colors.wine};
