@@ -1,6 +1,6 @@
 # React & TypeScript Micro Front-Ends via Webpack Module Federation
 
-This is a little proof of concept that I built to learn more about micro front-ends and Webpack Module Federation, using React & TypeScript.
+This is a little proof of concept that I built to learn more about micro front-ends and Webpack [Module Federation](https://module-federation.io), using React & TypeScript.
 
 ## Overview
 
@@ -13,7 +13,7 @@ This project consists of 2 micro front-ends, and 2 apps which utilize components
 
 ## Running Locally
 
-This project uses [NPM Workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) so all commands can be run at the root of the main project without needing to traverse the subfolders:
+This project uses [NPM workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) so all commands can be run at the root of the main project without needing to traverse the subfolders:
 
 1. Ensure you are using the right version of Node (v20) with `nvm use`
 2. Install dependencies with `npm install --workspaces`
