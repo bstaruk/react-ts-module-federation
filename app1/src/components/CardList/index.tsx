@@ -44,11 +44,7 @@ const CardList = ({ cards }: CardListProps) => {
         <ModalAlpha
           isOpen={activeCard !== undefined}
           onClose={() => setActiveCard(undefined)}
-          title={
-            activeCard
-              ? `${activeCard.firstName} ${activeCard.lastName}`
-              : undefined
-          }
+          title={`${activeCard?.firstName} ${activeCard?.lastName}`}
         >
           {!!activeCard?.description && <p>{activeCard.description}</p>}
 
