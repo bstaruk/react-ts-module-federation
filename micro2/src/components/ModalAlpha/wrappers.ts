@@ -81,9 +81,9 @@ export const Title = styled.h3`
 export const CloseButton = styled.button`
   background-color: ${(p) => p.theme.colors.white};
   color: ${(p) => p.theme.colors.black};
-  border: 1px solid ${(p) => p.theme.colors.wine};
+  border: 2px solid ${(p) => p.theme.colors.wine};
   border-radius: 0.375rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.03em;
   font-weight: 700;
