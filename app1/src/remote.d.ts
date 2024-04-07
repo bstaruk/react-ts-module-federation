@@ -22,6 +22,7 @@ declare module 'micro1/ContactFormAlpha' {
 declare module 'micro2/ModalAlpha' {
   interface ModalAlphaProps {
     children?: ReactNode;
+    closeLabel?: string;
     isOpen?: boolean;
     maxWidth?: string | number;
     onClose: () => void;

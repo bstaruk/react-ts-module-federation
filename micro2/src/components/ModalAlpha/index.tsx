@@ -10,6 +10,7 @@ import {
 
 type ModalAlphaProps = {
   children?: ReactNode;
+  closeLabel?: string;
   isOpen?: boolean;
   maxWidth?: string | number;
   onClose: () => void;
@@ -18,6 +19,7 @@ type ModalAlphaProps = {
 
 const ModalAlpha = ({
   children,
+  closeLabel = 'Close',
   isOpen,
   maxWidth,
   onClose,
@@ -34,7 +36,7 @@ const ModalAlpha = ({
         <Title>{title}</Title>
 
         <CloseButton type="button" onClick={() => onClose()}>
-          Close Modal
+          {closeLabel}
         </CloseButton>
       </Header>
 
